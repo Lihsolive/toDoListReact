@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: #17181f;
+  color: #aaa;
+}
+
+main {
+  max-width: 90%;
+  margin: 4rem auto; 
+}
+
+form {
+  border: 1px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type="text"] {
+  background: none;
+  border: 0;
+  padding: 0px 8px;
+  display: block;
+  width: 100%;
+}
+
+form button {
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+  width: 40px;
+}
+
+div.task {
+  background-color: #30313d;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.checkbox-uncheck svg {
+  height: 20px;
+  margin: 2px 5px;
+} 
+
+.checkbox-checked svg {
+  height: 22px;
+}
+

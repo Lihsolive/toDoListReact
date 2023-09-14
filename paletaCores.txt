@@ -1,0 +1,6 @@
+#998EF7 - lilás
+#FEFEFE - branco
+#F57EB4 - rosa
+#ADA5FF - lilás claro
+#887DFC - lilás médio
+#5C54AF - lilás escuro
