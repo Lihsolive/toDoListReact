@@ -4,7 +4,7 @@ import check from "../assets/img/check.svg"
 
 export default function Checkbox({checked = false, onClick}) {
   return (
-    <div onClick={onClick}>
+    <div className="checkbox" onClick={onClick}>
         {!checked && (
       <div className="checkbox-uncheck">
         <img className="checkbox-uncheck-img" src={uncheck} />
