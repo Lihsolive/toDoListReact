@@ -1,12 +1,12 @@
 import { useState } from "react";
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 export default function Checkbox({defaultChecked = false}) {
     const [checked, setChecked] = useState(defaultChecked);
 
-    // Checkbox.propTypes = {
-    //     defaultChecked: PropTypes.bool,
-    //   };
+    Checkbox.propTypes = {
+        defaultChecked: PropTypes.bool,
+      };
 
   return (
     <div>
