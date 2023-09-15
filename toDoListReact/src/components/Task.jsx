@@ -1,10 +1,10 @@
 import Checkbox from "./Checkbox";
 import PropTypes from 'prop-types';
 
-export default function Task({name,done}) {
+export default function Task({name,done, onToggle}) {
   return (
     <div className="task">
-      <Checkbox defaultChecked={done}/>
+      <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {name}
     </div>
   );
@@ -12,5 +12,6 @@ export default function Task({name,done}) {
 
 Task.propTypes = {
   name: PropTypes.string.isRequired,
-  done: PropTypes.bool.isRequired
+  done: PropTypes.bool.isRequired,
+  onToggle: PropTypes.func.is
 };

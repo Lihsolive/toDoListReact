@@ -44,14 +44,14 @@ div.task {
   padding: 5px 9px;
   margin-top: 5px;
   display: flex;
+  
 }
 
-.checkbox-uncheck svg {
+.checkbox-uncheck-img {
   height: 20px;
-  margin: 2px 5px;
 } 
 
-.checkbox-checked svg {
-  height: 22px;
+.checkbox-checked-img {
+  height: 20px;
 }
 

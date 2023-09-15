@@ -1,6 +1,7 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-export default function TaskForm(onAdd) {
+export default function TaskForm({ onAdd }) {
   const [taskName, setTaskName] = useState("");
 
   function handlesubmit(ev) {
@@ -19,4 +20,7 @@ export default function TaskForm(onAdd) {
       <button>+</button>
     </form>
   );
+}
+TaskForm.propTypes = {
+  onAdd: PropTypes.func.isRequired
 }
