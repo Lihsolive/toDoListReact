@@ -77,3 +77,8 @@ div.task.done {
   /* text-decoration: line-through; */
 }
 
+h1.text-complete, h2.text-message {
+  text-align: center;
+
+}
+

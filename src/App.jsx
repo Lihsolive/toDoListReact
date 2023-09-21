@@ -23,19 +23,41 @@ function App() {
   }
 
   function updateTaskDone(taskIndex, newDone) {
-    setTasks(prev => {
+    setTasks((prev) => {
       const newTasks = [...prev];
       newTasks[taskIndex].done = newDone;
-      return newTasks; 
+      return newTasks;
     });
+  }
+
+  const numberComplete = tasks.filter((t) => t.done).length;
+  const numberTotal = tasks.length;
+
+  function getMessage() {
+    const perentage = numberComplete/numberTotal * 100;
+    if (perentage === 0) {
+      return "Try to do at least one! 🙏";
+    }
+    if (perentage === 100) {
+      return "Nice job for today!  🥳"
+    }
+    return "Keep it going   💪";
   }
 
   return (
     <main>
+      <h1 className="text-complete">
+        {numberComplete}/{numberTotal} Complete
+      </h1>
+      <h2 className="text-message">{getMessage()}</h2>
       <TaskForm onAdd={addTask} />
+      {/* <button>{numberComplete}/{numberTotal} Complete</button> */}
       {tasks.map((task, index) => (
-        <Task key={index} {...task} 
-              onToggle={done => updateTaskDone(index, done)} />
+        <Task
+          key={index}
+          {...task}
+          onToggle={(done) => updateTaskDone(index, done)}
+        />
       ))}
     </main>
   );
