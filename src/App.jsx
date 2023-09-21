@@ -22,6 +22,12 @@ function App() {
     });
   }
 
+  function removeTask(indexToRemove) {
+    setTasks(prev => {
+      return prev.filter((taskObject, index) => index !== indexToRemove);
+    })
+  }
+
   function updateTaskDone(taskIndex, newDone) {
     setTasks((prev) => {
       const newTasks = [...prev];
@@ -56,6 +62,7 @@ function App() {
         <Task
           key={index}
           {...task}
+          onTrash={() => removeTask(index)}
           onToggle={(done) => updateTaskDone(index, done)}
         />
       ))}
