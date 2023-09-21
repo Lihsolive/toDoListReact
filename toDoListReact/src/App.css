@@ -44,7 +44,12 @@ div.task {
   padding: 5px 9px;
   margin-top: 5px;
   display: flex;
+  align-items: center;
   transition: opacity .3s linear;
+}
+
+div.task-name {
+  flex-grow: 1;
 }
 
 div.task span {
@@ -60,7 +65,7 @@ div.task span:before {
   position: absolute;
   top: 10px;
   transition: width .2s linear;
-  rotate: -3deg;
+  /* rotate: -3deg; */
 }
 
 div.task.done span:before {
@@ -79,6 +84,22 @@ div.task.done {
 
 h1.text-complete, h2.text-message {
   text-align: center;
+}
 
+div.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+button.trash-icon, button.pen-icon {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+button.trash-icon img, button.pen-icon img  {
+  /* fill: #aaa */
+  height: 20px;
 }
 
