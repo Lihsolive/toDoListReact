@@ -50,6 +50,14 @@ function App() {
     return "Keep it going   💪";
   }
 
+  function renameTask(index, newName) {
+    setTasks(prev => {
+      const newTasks = [...prev];
+      newTasks[index].name = newName;
+      return newTasks;
+    })
+  }
+
   return (
     <main>
       <h1 className="text-complete">
@@ -62,6 +70,7 @@ function App() {
         <Task
           key={index}
           {...task}
+          onRename={(newName) => renameTask(index,newName)}
           onTrash={() => removeTask(index)}
           onToggle={(done) => updateTaskDone(index, done)}
         />
