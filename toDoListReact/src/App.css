@@ -1,23 +1,65 @@
+/* Fontes */
+@font-face {
+  font-family: Kalam;
+  src: url("../src/assets/font/Kalam-Regular.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Kalam;
+  src: url("../src/assets/font/Kalam-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Centra;
+  src: url("../src/assets/font/Kalam-Regular.ttf");
+  font-weight: 400;
+}
+
 * {
   box-sizing: border-box;
 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: white;
+  font-family: "Kalam";
+}
+
 body {
-  background-color: #17181f;
+  /* background-color: #17181f; */
+  /* background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(153,142,247,1) 100%); */
+  background: url("../src/assets/img/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   color: #aaa;
+  min-height: 100vh;
 }
 
 main {
   max-width: 90%;
   margin: 4rem auto; 
+  padding: 4rem;
 }
 
 form {
-  border: 1px solid #30313d;
+  /* border: 1px solid #30313d; */
+  border: 1px solid #fff;
   border-radius: 10px;
   padding: 5px;
   display: flex;
+  /* width: 70%; */
 }
 
 form input[type="text"] {
@@ -30,16 +72,17 @@ form input[type="text"] {
 }
 
 form button {
-  background-color: #61dafb;
+  background-color:rgba(153,142,247,1);
   border: 0;
   border-radius: 6px;
   cursor: pointer;
   padding: 10px;
   width: 40px;
+  color: white;
 }
 
 div.task {
-  background-color: #30313d;
+  background-color: #998ef7;
   border-radius: 10px;
   padding: 5px 9px;
   margin-top: 5px;
