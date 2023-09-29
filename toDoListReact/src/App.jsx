@@ -7,7 +7,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    if (tasks.length == 0) return;
+    if (tasks.length === 0) return;
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
@@ -16,9 +16,14 @@ function App() {
     setTasks(tasks);
   }, []);
 
-  function addTask(name) {
+  function addTask(name, description) {
+    if (!name.trim()) {
+      // alert("adicione uma descrição para a tarefa")
+      return
+    }
+
     setTasks((prev) => {
-      return [...prev, { name: name, done: false }];
+      return [...prev, { name: name, description: description, done: false }];
     });
   }
 
