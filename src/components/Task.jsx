@@ -4,14 +4,15 @@ import trashIcon from "../assets/icons/trash.svg";
 import penIcon from "../assets/icons/pen.svg";
 import { useState } from "react";
 
-export default function Task({ name, done, onToggle, onTrash, onRename }) {
+export default function Task({ name, description, done, onToggle, onTrash, onRename }) {
   const [editMode, setEditMode] = useState(false);
   return (
     <div className={"task" + (done ? " done" : "")}>
       <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {!editMode && (
       <div className="task-name">
-        <span>{name}</span>
+        <h2>{name}</h2>
+        <span>{description}</span>
       </div>
       )}
       {editMode && (
@@ -33,6 +34,7 @@ export default function Task({ name, done, onToggle, onTrash, onRename }) {
 
 Task.propTypes = {
   name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   done: PropTypes.bool.isRequired,
   onToggle: PropTypes.func.is,
   onTrash: PropTypes.func.is,
