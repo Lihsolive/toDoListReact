@@ -42,7 +42,7 @@ form.task-form {
 
 form.task-form input[type="text"] { /* para especificar qual o tipo de input deseja estilizar. No caso, inputs de texto */
   background: none;
-  color: white;
+  color: black;
   border: 0;
   padding: 0px 8px;
   display: block;
@@ -50,7 +50,7 @@ form.task-form input[type="text"] { /* para especificar qual o tipo de input des
 }
 
 form.task-form input[type="text"]::placeholder {
-  color: white;
+  color: black;
   opacity: 0.5;
 }
 
@@ -135,3 +135,7 @@ button.trash-icon, button.pen-icon {
 button.trash-icon img, button.pen-icon img  {
   height: 20px;
 }
+
+/* .modal {
+  background-color: #998ef7;
+} */
