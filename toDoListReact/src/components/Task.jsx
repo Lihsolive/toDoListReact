@@ -11,7 +11,7 @@ export default function Task({ name, description, done, onToggle, onTrash, onRen
       <Checkbox checked={done} onClick={() => onToggle(!done)} />
       {!editMode && (
       <div className="task-name">
-        <h2>{name}</h2>
+        <h2><span>{name}</span></h2>
         <span>{description}</span>
       </div>
       )}

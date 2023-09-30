@@ -20,7 +20,7 @@ export default function TaskForm({ onAdd }) {
   return (
     <div>
        <button onClick={() => setModalIsOpen(true)} className="button-add" >+</button>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)} className="meu-modal">
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <form className="task-form" onSubmit={handleSubmit}>
           <input className="task-name"
             type="text"
@@ -28,8 +28,8 @@ export default function TaskForm({ onAdd }) {
             onChange={(ev) => setTaskName(ev.target.value)}
             placeholder="New task name"
           />
-          <input className="task-description"
-            type="text"
+          <textarea className="task-description"
+            type="message"
             value={taskDescription}
             onChange={(ev) => setTaskDescription(ev.target.value)}
             placeholder="Task description"

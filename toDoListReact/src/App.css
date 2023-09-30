@@ -7,8 +7,9 @@
 
 * {
   box-sizing: border-box;
+}
 
-} h1,h2,h3,h4,h5,h6 {
+h1, h2, h3 {
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -29,47 +30,58 @@ body {
 
 main {
   max-width: 80%;
-  margin: 2rem auto; 
+  margin: 2rem auto;
   padding: 2rem;
 }
 
-form.task-form {
-  border: 1px solid #fff;
-  border-radius: 50px;
+.task-form {
   padding: 2.5px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-form.task-form input[type="text"] { /* para especificar qual o tipo de input deseja estilizar. No caso, inputs de texto */
+.task-form input,
+textarea.task-description {
+  /* para especificar qual o tipo de input deseja estilizar. No caso, inputs de texto */
   background: none;
-  color: black;
-  border: 0;
-  padding: 0px 8px;
-  display: block;
-  width: 100%;
+  color: white;
+  padding: 10px 8px;
+  width: 50%;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  margin-top: 2rem;
+  /* width: 100%;*/ /*apenas no mobile */
 }
 
-form.task-form input[type="text"]::placeholder {
-  color: black;
+.task-form input.task-name::placeholder,
+textarea.task-description::placeholder {
+  color: rgb(255, 255, 255);
   opacity: 0.5;
+  font-size: 0.9em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-form.task-form input.task-description, form.task-form input.task-description:focus {
-  border-left: solid 1px white;
-}
-
-form.task-form input:focus {
-  border: none;
+.task-form input:focus,
+textarea.task-description:focus {
   outline: none;
 }
 
-form .button-add {
-  background-color:rgba(153,142,247,1);
+textarea.task-description {
+  height: 100px;
+}
+
+.task-form .button-add {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(153, 142, 247, 1);
   border: 0;
   border-radius: 50%;
   cursor: pointer;
   padding: 10px;
-  width: 60px;
+  width: 40px;
   color: white;
   font-size: 1rem;
 }
@@ -81,10 +93,11 @@ div.task {
   margin-top: 5px;
   display: flex;
   align-items: center;
-  transition: opacity .3s linear;
+  transition: opacity 0.3s linear;
 }
 
-div.task-name, div.task form {
+div.task-name,
+div.task form {
   flex-grow: 1;
 }
 
@@ -93,18 +106,27 @@ div.task span {
 }
 
 div.task span:before {
-  content: '';
+  content: "";
   display: block;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: #ddd;
   position: absolute;
-  top: 10px;
-  transition: width .2s linear;
+  top: 50%;
+  transition: width 0.2s linear;
 }
 
 div.task.done span:before {
   width: 100%;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+h1.text-complete,
+h2.text-message {
+  text-align: center;
 }
 
 .checkbox div img {
@@ -112,30 +134,23 @@ div.task.done span:before {
   margin-right: 6px;
 }
 
-div.task.done {
-  opacity: 0.3;
-}
-
-h1.text-complete, h2.text-message {
-  text-align: center;
-}
-
-div.checkbox {
-  display: flex;
-  align-items: center;
-}
-
-button.trash-icon, button.pen-icon {
+/* Ícones das tasks - lixeira e lápis */
+button.trash-icon,
+button.pen-icon {
   background: none;
   border: none;
   display: flex;
   cursor: pointer;
 }
 
-button.trash-icon img, button.pen-icon img  {
+button.trash-icon img,
+button.pen-icon img {
   height: 20px;
 }
 
-/* .modal {
-  background-color: #998ef7;
-} */
+/* Estilo para o modal */
+.ReactModal__Content {
+  background: url("../src/assets/img/back.jpg") !important;
+  border: none !important;
+  background-size: cover !important;
+}
