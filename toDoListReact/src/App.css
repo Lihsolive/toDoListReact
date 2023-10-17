@@ -23,14 +23,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  /* min-height: auto; */
   min-height: 100vh;
-  /* max-height: 100%; */
 }
 
 main {
-  max-width: 80%;
-  margin: 2rem auto;
+  max-width: 100%;
+  margin: 2rem;
   padding: 2rem;
 }
 
@@ -44,7 +42,6 @@ main {
 
 .task-form input,
 textarea.task-description {
-  /* para especificar qual o tipo de input deseja estilizar. No caso, inputs de texto */
   background: none;
   color: white;
   padding: 10px 8px;
@@ -72,7 +69,7 @@ textarea.task-description {
   height: 100px;
 }
 
-.task-form .button-add {
+.task-form .btn-add-modal, .btn-add {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -85,7 +82,7 @@ textarea.task-description {
   color: white;
   font-size: 1rem;
 }
-
+/* Task */
 div.task {
   background-color: #998ef7;
   border-radius: 10px;
@@ -93,23 +90,28 @@ div.task {
   margin-top: 5px;
   display: flex;
   align-items: center;
+  width: 100%;
   transition: opacity 0.3s linear;
 }
 
-div.task-name,
-div.task form {
+.task-name {
   flex-grow: 1;
 }
 
-div.task span {
+.task span {
   position: relative;
+}
+
+.task .description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .7em;
 }
 
 div.task span:before {
   content: "";
   display: block;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: #ddd;
   position: absolute;
   top: 50%;
@@ -154,3 +156,24 @@ button.pen-icon img {
   border: none !important;
   background-size: cover !important;
 }
+
+/* Botão contagem */
+.btn-count {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(207, 111, 164);
+  color: white;
+}
+
+/* Task List */
+.container {
+  /* MOBILE */
+  /* display: flex;
+  flex-direction: column;  */
+  display: grid;
+  grid-template-columns: repeat(3, .3fr);
+  grid-template-rows: repeat(2, .1fr);
+  background-color: aqua;
+}
+

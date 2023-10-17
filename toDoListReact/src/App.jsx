@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import Task from "./components/Task";
 import TaskForm from "./components/TaskForm";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -65,13 +65,14 @@ function App() {
 
   return (
     <main>
-      <h1 className="text-complete">
+      {/* <h1 className="text-complete">
         {numberComplete}/{numberTotal} Complete
-      </h1>
+      </h1> */}
       <h2 className="text-message">{getMessage()}</h2>
       <TaskForm onAdd={addTask} />
-      {/* <button>{numberComplete}/{numberTotal} Complete</button> */}
-      {tasks.map((task, index) => (
+      <button className="btn-count">{numberComplete}/{numberTotal}</button>
+        <div className="container">  
+         {tasks.map((task, index) => (
         <Task
           key={index}
           {...task}
@@ -80,6 +81,7 @@ function App() {
           onToggle={(done) => updateTaskDone(index, done)}
         />
       ))}
+    </div>
     </main>
   );
 }
