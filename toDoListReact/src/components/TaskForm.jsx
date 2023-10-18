@@ -25,6 +25,7 @@ export default function TaskForm({ onAdd }) {
       </button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <form className="task-form" onSubmit={handleSubmit}>
+          <h1>Nova Tarefa</h1>
           <input
             className="task-name"
             type="text"

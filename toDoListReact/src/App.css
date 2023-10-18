@@ -12,24 +12,32 @@
 h1, h2, h3 {
   margin: 0;
   padding: 0;
-  line-height: normal;
   color: white;
   font-family: "Kalam";
 }
 
 body {
   background: url("../src/assets/img/background.svg");
+  /* background: #1200b6; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 main {
-  max-width: 100%;
-  margin: 2rem;
-  padding: 2rem;
+  min-width: 100%;
+  min-height: 100vh; 
+  margin: 0 auto;
+  /* padding: 2rem; */
+}
+
+/* Estilo para o modal */
+.ReactModal__Content {
+  background: url("../src/assets/img/back.jpg") !important;
+  border: none !important;
+  background-size: cover !important;
 }
 
 .task-form {
@@ -45,7 +53,7 @@ textarea.task-description {
   background: none;
   color: white;
   padding: 10px 8px;
-  width: 50%;
+  width: 80%;
   border: 1px solid #fff;
   border-radius: 20px;
   margin-top: 2rem;
@@ -71,8 +79,8 @@ textarea.task-description {
 
 .task-form .btn-add-modal, .btn-add {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background-color: rgba(153, 142, 247, 1);
   border: 0;
   border-radius: 50%;
@@ -82,58 +90,86 @@ textarea.task-description {
   color: white;
   font-size: 1rem;
 }
-/* Task */
-div.task {
+
+/* Task página principal */
+
+/* Botão contagem */
+.container-btn-count {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.btn-count {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(207, 111, 164);
+  color: white;
+}
+
+.principal-title {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.task {
   background-color: #998ef7;
   border-radius: 10px;
   padding: 2.5px 4.5px;
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
-  align-items: center;
-  width: 100%;
+  width: 250px;
   transition: opacity 0.3s linear;
 }
 
 .task-name {
   flex-grow: 1;
+  line-height: 0%;
+  padding: 1em 0;
+}
+
+.task .description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .7em;
+  color: rgb(255, 255, 255);
+  opacity: .7;
+  line-height: 1.1em;
+
 }
 
 .task span {
   position: relative;
 }
 
-.task .description {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: .7em;
-}
-
-div.task span:before {
+.task span:before {
   content: "";
   display: block;
   width: 0;
-  height: 1px;
+  height: 1.5px;
   background-color: #ddd;
   position: absolute;
-  top: 50%;
+  top: 45%;
   transition: width 0.2s linear;
 }
 
-div.task.done span:before {
+.task.done span:before {
   width: 100%;
 }
 
-div.task.done {
+.task.done {
   opacity: 0.3;
 }
 
-h1.text-complete,
-h2.text-message {
+/* h1.text-complete,
+h2.principal-title {
   text-align: center;
-}
+} */
 
 .checkbox div img {
   height: 20px;
-  margin-right: 6px;
+  margin: 6px;
 }
 
 /* Ícones das tasks - lixeira e lápis */
@@ -143,37 +179,24 @@ button.pen-icon {
   border: none;
   display: flex;
   cursor: pointer;
+  padding: 5px;
+  align-items: flex-end;
 }
 
-button.trash-icon img,
-button.pen-icon img {
-  height: 20px;
+.pen-icon img, .trash-icon img {
+  width: 12px;
 }
 
-/* Estilo para o modal */
-.ReactModal__Content {
-  background: url("../src/assets/img/back.jpg") !important;
-  border: none !important;
-  background-size: cover !important;
-}
-
-/* Botão contagem */
-.btn-count {
-  margin: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(207, 111, 164);
-  color: white;
-}
-
-/* Task List */
 .container {
   /* MOBILE */
   /* display: flex;
-  flex-direction: column;  */
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; */
+  /* -------------------- */
   display: grid;
-  grid-template-columns: repeat(3, .3fr);
-  grid-template-rows: repeat(2, .1fr);
-  background-color: aqua;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: 0 auto;
 }
 
