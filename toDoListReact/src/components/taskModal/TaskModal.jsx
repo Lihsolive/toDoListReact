@@ -1,11 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-modal";
-import "../App.css"
+import btnAdd from "../../assets/icons/btn-add.svg";
+import btnCheckAdd from "../../assets/icons/btn-check-add.svg";
+import "./TaskModal.css";
 
 Modal.setAppElement("#root"); // Substitua "#root" pelo id do elemento raiz do seu aplicativo
 
-export default function TaskForm({ onAdd }) {
+export default function TaskModal({ onAdd }) {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -21,11 +23,11 @@ export default function TaskForm({ onAdd }) {
   return (
     <div>
       <button onClick={() => setModalIsOpen(true)} className="btn-add">
-        +
+        <img src={btnAdd} />
       </button>
       <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
         <form className="task-form" onSubmit={handleSubmit}>
-          <h1>Nova Tarefa</h1>
+          <h1>New Task</h1>
           <input
             className="task-name"
             type="text"
@@ -40,13 +42,15 @@ export default function TaskForm({ onAdd }) {
             onChange={(ev) => setTaskDescription(ev.target.value)}
             placeholder="Task description"
           />
-          <button className="btn-add-modal">+</button>
+          <button className="btn-add-modal">
+            <img src={btnCheckAdd} />
+          </button>
         </form>
       </Modal>
     </div>
   );
 }
 
-TaskForm.propTypes = {
+TaskModal.propTypes = {
   onAdd: PropTypes.func.isRequired,
 };

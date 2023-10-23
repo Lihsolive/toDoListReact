@@ -1,0 +1,106 @@
+/* Botão contagem */
+.container-btn-count {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px auto;
+  width: 90%;
+}
+
+.btn-count {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(207, 111, 164);
+  color: white;
+}
+
+.principal-title {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.task {
+  background-color: #998ef7;
+  border-radius: 10px;
+  padding: 2.5px 4.5px;
+  margin-top: 10px;
+  display: flex;
+  width: 250px;
+  transition: opacity 0.3s linear;
+}
+
+.task-name {
+  flex-grow: 1;
+  line-height: 0%;
+  padding: 1em 0;
+}
+
+.task .description {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 0.7em;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  line-height: 1.1em;
+}
+
+.task span {
+  position: relative;
+}
+
+.task span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: #ddd;
+  position: absolute;
+  top: 45%;
+  transition: width 0.2s linear;
+}
+
+.task.done span:before {
+  width: 100%;
+}
+
+.task.done {
+  opacity: 0.3;
+}
+
+/* h1.text-complete,
+  h2.principal-title {
+    text-align: center;
+  } */
+
+.checkbox div img {
+  height: 20px;
+  margin: 6px;
+}
+
+/* Ícones das tasks - lixeira e lápis */
+button.trash-icon,
+button.pen-icon {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding: 5px;
+  align-items: flex-end;
+}
+
+.pen-icon img,
+.trash-icon img {
+  width: 15px;
+}
+
+.container {
+  /* MOBILE */
+  /* display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; */
+  /* -------------------- */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: 0 auto;
+}

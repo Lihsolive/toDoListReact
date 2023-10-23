@@ -1,0 +1,63 @@
+/* Estilo para o modal */
+.ReactModal__Content {
+    background: url("../src/assets/img/back.jpg") !important;
+    border: none !important;
+    background-size: cover !important;
+  }
+  
+  .task-form {
+    padding: 2.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .task-form input,
+  textarea.task-description {
+    background: none;
+    color: white;
+    padding: 10px 8px;
+    width: 80%;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin-top: 2rem;
+    /* width: 100%;*/ /*apenas no mobile */
+  }
+  
+  .task-form input.task-name::placeholder,
+  textarea.task-description::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    font-size: 0.9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .task-form input:focus,
+  textarea.task-description:focus {
+    outline: none;
+  }
+  
+  textarea.task-description {
+    height: 100px;
+  }
+  
+  .task-form .btn-add-modal, .btn-add {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(153, 142, 247, 1);
+    background-color: transparent;
+    border: 0;
+    /* border-radius: 50%; */
+    cursor: pointer;
+    /* padding: 10px; */
+    /* width: 40px; */
+    /* color: white; */
+    /* font-size: 1rem; */
+  }
+  
+  .task-form .btn-add-modal img, .btn-add img {
+    height: 40px;
+  } 
+  
