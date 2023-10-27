@@ -1,7 +1,25 @@
 /* Fontes */
 @font-face {
+  font-family: Amatic;
+  src: url("../src/assets/font/AmaticSC-Regular.ttf");
+  font-weight: 700;
+}
+
+@font-face {
   font-family: Kalam;
   src: url("../src/assets/font/Kalam-Regular.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Lindsey;
+  src: url("../src/assets/font/lindsey-w01-bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: ReenieBeanie;
+  src: url("../src/assets/font/ReenieBeanie-Regular.ttf");
   font-weight: 700;
 }
 
@@ -13,11 +31,12 @@ h1, h2, h3 {
   margin: 0;
   padding: 0;
   color: white;
-  font-family: "Kalam";
+  font-family: "Lindsey", sans-serif;
 }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "ReenieBeanie", sans-serif;
+  font-size: 20px;
 }
 
 body {

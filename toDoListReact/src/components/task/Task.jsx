@@ -1,21 +1,13 @@
-import Checkbox from "./Checkbox";
 import PropTypes from "prop-types";
+import Checkbox from "./Checkbox";
 import trashIcon from "../../assets/icons/trash.svg";
 import penIcon from "../../assets/icons/pen.svg";
 import { useState } from "react";
-
 import "./Task.css";
 
-export default function Task({
-  name,
-  description,
-  done,
-  onToggle,
-  onTrash,
-  onRename,
-}) {
+export default function Task({ name, description, done, onToggle, onTrash, onRename }) {
   const [editMode, setEditMode] = useState(false);
-
+  
   return (
     <div className="container">
       <div className={"task" + (done ? " done" : "")}>
@@ -43,11 +35,11 @@ export default function Task({
             />
           </form>
         )}
-        <button className="trash-icon" onClick={onTrash}>
+        <button className="btn-trash" onClick={onTrash}>
           <img src={trashIcon} />
         </button>
         <button
-          className="pen-icon"
+          className="btn-pen"
           onClick={() => setEditMode((prev) => !prev)}
         >
           <img src={penIcon} />

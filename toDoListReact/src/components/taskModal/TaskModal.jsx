@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
 import Modal from "react-modal";
+import PropTypes from "prop-types";
 import btnAdd from "../../assets/icons/btn-add.svg";
 import btnCheckAdd from "../../assets/icons/btn-check-add.svg";
 import "./TaskModal.css";

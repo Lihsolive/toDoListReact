@@ -29,8 +29,8 @@
   textarea.task-description::placeholder {
     color: rgb(255, 255, 255);
     opacity: 0.5;
-    font-size: 0.9em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-family: "Kalam", sans-serif;
   }
   
   .task-form input:focus,
@@ -49,12 +49,7 @@
     background-color: rgba(153, 142, 247, 1);
     background-color: transparent;
     border: 0;
-    /* border-radius: 50%; */
     cursor: pointer;
-    /* padding: 10px; */
-    /* width: 40px; */
-    /* color: white; */
-    /* font-size: 1rem; */
   }
   
   .task-form .btn-add-modal img, .btn-add img {
